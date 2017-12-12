@@ -23,7 +23,7 @@ public final class CastUtil {
      * 转为double型
      */
     public static double castDouble(Object obj){
-        return CastUtil.castDouble(obj, 0 );
+        return CastUtil.castDouble(obj, 0.0 );
     }
 
     /**
@@ -105,11 +105,11 @@ public final class CastUtil {
      * 转为boolean型（提供默认值）
      */
     public static boolean castBoolean(Object obj, boolean defaultValue){
-        boolean booleaValue = defaultValue;
+        boolean booleanValue = defaultValue;
         if (obj != null){
-            booleaValue = Boolean.parseBoolean(castString(obj));
+            booleanValue = Boolean.parseBoolean(castString(obj));
         }
-        return  booleaValue;
+        return  booleanValue;
     }
 
 

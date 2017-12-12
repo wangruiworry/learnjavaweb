@@ -17,7 +17,7 @@ import java.util.Map;
 public class CustomerServiceTest {
     private final CustomerService customerService;
 
-    public CustomerServiceTest(){
+    public CustomerServiceTest() {
         customerService = new CustomerService();
     }
 
@@ -27,13 +27,13 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void getCustomerListTest() throws Exception{
+    public void getCustomerListTest() throws Exception {
         List<Customer> customerList = customerService.getCustomerList();
         Assert.assertEquals(2, customerList.size());
     }
 
     @Test
-    public void getCustomerTest() throws Exception{
+    public void getCustomerTest() throws Exception {
         long id = 1;
         Customer customer = customerService.getCustomer(id);
         Assert.assertNotNull(customer);
@@ -41,7 +41,7 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void createCustomerTest() throws Exception{
+    public void createCustomerTest() throws Exception {
         Map<String, Object> fieldMap = new HashMap<String, Object>();
         fieldMap.put("name", "customer100");
         fieldMap.put("contact", "John");
@@ -51,7 +51,7 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void updateCustomerTest() throws Exception{
+    public void updateCustomerTest() throws Exception {
         long id = 1;
         Map<String, Object> fieldMap = new HashMap<String, Object>();
         fieldMap.put("contact", "Eric");
@@ -61,7 +61,7 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void deleteCustomerTest() throws Exception{
+    public void deleteCustomerTest() throws Exception {
         long id = 1;
         boolean result = customerService.deleteCustomer(id);
         Assert.assertTrue(result);
